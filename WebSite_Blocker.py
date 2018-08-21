@@ -34,7 +34,7 @@ from datetime import datetime as dt
 
 ### Global Constants
 path_to_hosts_file_Windows           = "C:\\Windows\\System32\\drivers\\etc\\hosts"
-path_to_hosts_file_Linux_and_Mac     = "hosts_test"
+path_to_hosts_file_Linux_and_Mac     = "/etc/hosts"
 path_to_list_of_distracting_websites = "distracting_websites_list"
 localhost                            = "127.0.0.1"
 
