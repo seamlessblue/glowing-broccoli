@@ -10,7 +10,7 @@
 #    WebSite_Blocker.py
 #
 # Usage: 
-#    ./WebSite_Blocker.py
+#    ./WebSite_Blocker.py [-h] [-m easy|nightmare]
 #
 # Description:
 #    This tool will block websites.
@@ -20,8 +20,9 @@
 # It also has logic to block the website only during certain time of the day.
 #
 # Important:
-#    The script depends on "distracting_websites_list" file to be in the same
-# directory. It contains the list of websites to be blocked.
+#    The script depends on "distracting_websites_easy/ightmate" files to be 
+# inside of "in" directory. "in" directory has to be in the same directory as
+# "WebSite_Blocker.py". They contain the list of websites to be blocked.
 #    The script requires elevated privilages (Administrator/root/sudo) to work.
 #
 ################################################################################
@@ -37,7 +38,7 @@ from datetime import datetime as dt
 ### Global Constants
 p_distracting_websites_list = Path.cwd() / "in" / "distracting_websites_list_"
 p_hosts_file_windows        = Path("C:\\Windows\\System32\\drivers\\etc\\hosts")
-p_hosts_file_linux_and_mac  = Path("hosts_test")
+p_hosts_file_linux_and_mac  = Path("/etc/hosts")
 localhost                   = "127.0.0.1"
 usage                       = "Usage: ./WebSite_Blocker.py -m <easy|nightmare>"
 modes                       = ['easy', 'nightmare']
